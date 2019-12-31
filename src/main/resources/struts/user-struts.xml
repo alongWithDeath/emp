@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<!--
+	<constant name="struts.i18n.encoding" value="GBK"></constant>
+-->
+	<package name="spring1" extends="struts-default" namespace="/emp">
+	  <action name="show_*" class="com.baizhi.action.UserAction" method="{1}">
+		 <!-- <result name="showAllSuccess" type="dispatcher">/index.jsp</result> -->
+		  <result name="registerSuccess" type="redirect">/emplist.jsp</result>
+
+		  <result name="deleteSuccess" type="redirect">/emplist.jsp</result>
+
+		  <result name="likeSuccess" type="dispatcher">/emplist.jsp</result>
+
+		  <result name="updateSuccess" type="redirect">/emplist.jsp</result>
+	  </action>
+	</package>
+
+</struts>
